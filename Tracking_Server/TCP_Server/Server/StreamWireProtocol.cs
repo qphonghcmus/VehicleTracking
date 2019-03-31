@@ -60,6 +60,9 @@ namespace TCP_Server.Server
             return msg.MessageData;
         }
 
+        /// <summary>
+        /// Reset protocal when connnection is reset
+        /// </summary>
         public void Reset()
         {
             if(receiveMemoryStream.Length > 0)
