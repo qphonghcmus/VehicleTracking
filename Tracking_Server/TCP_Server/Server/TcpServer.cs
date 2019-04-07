@@ -14,6 +14,8 @@ namespace TCP_Server.Server
 
         public IScsServer _server;
 
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        
         #endregion
 
         #region public methods
@@ -26,21 +28,40 @@ namespace TCP_Server.Server
         public void CreateServer(string ip, int port)
         {
             _server = ScsServerFactory.CreateServer(new ScsTcpEndPoint(ip, port));
-
+            
             // Registered events for server when client connected and disconnected
             _server.ClientConnected += _server_ClientConnected;
             _server.ClientDisconnected += _server_ClientDisconnected;
+
+            // log
+            log.Info("Creating Server successfully");
         }
 
 
         public void StartServer()
         {
-            _server.Start();
+            try
+            {
+                _server.Start();
+                log.Info("Starting Server successfully");
+            }
+            catch(Exception ex)
+            {
+                log.Error("Error when start Server", ex);
+            }
         }
 
         public void StopServer()
         {
-            _server.Stop();
+            try
+            {
+                _server.Stop();
+                log.Info("Stopping Server");
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error when stopping Server", ex);
+            }
         }
 
         #endregion
@@ -49,7 +70,7 @@ namespace TCP_Server.Server
 
         private void _server_ClientDisconnected(object sender, ServerClientEventArgs e)
         {
-            
+            log.Info("Client disconnected");
         }
 
         private void _server_ClientConnected(object sender, ServerClientEventArgs e)
@@ -59,6 +80,9 @@ namespace TCP_Server.Server
 
             // create a object that represent client to handle events
             var client = new ServerClient(e.Client);
+
+            // log
+            log.Info("Client connected");
         }
 
         #endregion

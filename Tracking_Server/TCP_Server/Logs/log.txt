@@ -1,0 +1,22 @@
+10:31:26,196 [TCP_Server.Server.TCP_Server_Program] INFO - Config successfully
+10:31:26,237 [TCP_Server.Server.TcpServer] INFO - Creating Server successfully
+10:31:26,273 [TCP_Server.Server.TcpServer] INFO - Starting Server successfully
+10:31:33,849 [TCP_Server.Server.TcpServer] INFO - Client connected
+10:31:38,812 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+10:31:38,816 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+10:31:41,799 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+10:31:41,799 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+10:31:43,675 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+10:31:43,676 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+10:31:53,707 [TCP_Server.Server.TcpServer] INFO - Client disconnected
+11:10:01,997 [TCP_Server.Server.TCP_Server_Program] INFO - Config successfully
+11:10:02,035 [TCP_Server.Server.TcpServer] INFO - Creating Server successfully
+11:10:02,071 [TCP_Server.Server.TcpServer] INFO - Starting Server successfully
+11:10:04,977 [TCP_Server.Server.TcpServer] INFO - Client connected
+11:10:10,684 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+11:10:10,689 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+11:10:15,507 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+11:10:15,507 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+11:10:19,792 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+11:10:19,792 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+11:10:29,831 [TCP_Server.Server.TcpServer] INFO - Client disconnected

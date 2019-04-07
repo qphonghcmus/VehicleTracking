@@ -17,6 +17,8 @@ namespace TCP_Server.Server
 
         private readonly IScsServerClient _client;
 
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         #endregion
 
         #region Constructor
@@ -41,6 +43,8 @@ namespace TCP_Server.Server
 
         private void Client_MessageReceived(object sender, Hik.Communication.Scs.Communication.Messages.MessageEventArgs e)
         {
+            // log
+            log.Info("Receiving message from client");
             try
             {
                 // Message used to send or received in StreamWireProtol is ScsRawDataMessage
@@ -54,9 +58,12 @@ namespace TCP_Server.Server
                 var rep = "\r\nOK!\r\n";
                 _client.SendMessage(new ScsRawDataMessage(Encoding.ASCII.GetBytes(rep)));
 
-            }catch(Exception )
-            {
+                log.Info("Replying message to client successfully");
 
+            }
+            catch(Exception ex)
+            {
+                log.Error("Replying message failed", ex);
             }
         }
 
