@@ -1,0 +1,3 @@
+﻿&I=idcar; serial;&G=1; vido; kinhdo; van toc gps; khoang cach gps;tong khoang cach gps; &S1=trang thai xe; dien ap binh;dien ap pin; cuong do truong; loi the nho &D= cuoc xe; thoi gian record;&H1= ma uid; giay phep lai xe; van toc xe hien tai;&CT=SERVER;;MACHINE=0/1;OK/ERR
+
+&I=idcar; serial;&G=1; vido; kinhdo; van toc gps; khoang cach gps;tong khoang cach gps; &S1=trang thai xe; dien ap binh;dien ap pin; cuong do truong; loi the nho &D= cuoc xe; thoi gian record;

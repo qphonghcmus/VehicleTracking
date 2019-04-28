@@ -17,6 +17,18 @@ namespace TCP_Server.Controllers.Config
         [DataMember]
         public int Port { get; set; }
 
+        [DataMember]
+        public string SqlServer { get; set; }
+
+        [DataMember]
+        public string SqlDbName { get; set; }
+
+        [DataMember]
+        public string SqlUser { get; set; }
+
+        [DataMember]
+        public string SqlPwd { get; set; }
+
         #endregion
 
         public void Fix()
@@ -30,6 +42,18 @@ namespace TCP_Server.Controllers.Config
             {
                 Port = 10084;
             }
+
+            if (string.IsNullOrEmpty(SqlServer))
+                SqlServer = @".\";
+
+            if (string.IsNullOrEmpty(SqlDbName))
+                SqlDbName = "VehicleData";
+
+            if (string.IsNullOrEmpty(SqlUser))
+                SqlUser = "sa";
+
+            if (string.IsNullOrEmpty(SqlPwd))
+                SqlPwd = "123456";
         }
     }
 }

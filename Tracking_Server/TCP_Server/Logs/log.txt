@@ -20,3 +20,54 @@
 11:10:19,792 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
 11:10:19,792 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
 11:10:29,831 [TCP_Server.Server.TcpServer] INFO - Client disconnected
+19:39:13,092 [TCP_Server.Server.TCP_Server_Program] INFO - Config successfully
+19:39:13,150 [TCP_Server.Server.TcpServer] INFO - Creating Server successfully
+19:39:13,193 [TCP_Server.Server.TcpServer] INFO - Starting Server successfully
+19:41:18,430 [TCP_Server.Server.TcpServer] INFO - Client connected
+19:41:19,914 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+19:41:20,399 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:41:20,461 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:41:30,476 [TCP_Server.Server.TcpServer] INFO - Client disconnected
+19:43:03,421 [TCP_Server.Server.TcpServer] INFO - Client connected
+19:43:05,468 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+19:43:05,468 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:43:05,499 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:43:15,514 [TCP_Server.Server.TcpServer] INFO - Client disconnected
+19:43:50,205 [TCP_Server.Server.TcpServer] INFO - Client connected
+19:43:52,861 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+19:43:52,861 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:43:53,127 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:44:03,142 [TCP_Server.Server.TcpServer] INFO - Client disconnected
+19:44:47,173 [TCP_Server.Server.TcpServer] INFO - Client connected
+19:44:49,017 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+19:44:49,017 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:44:49,126 [TCP_Server.Server.ServerClient] ERROR - Save data failed 
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at TCP_Server.Server.ServerClient.SaveSplittedData(String data) in C:\Users\PC\Desktop\Vehicle Tracking\VehicleTracking\Tracking_Server\TCP_Server\Server\ServerClient.cs:line 143
+19:44:49,158 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:44:59,167 [TCP_Server.Server.TcpServer] INFO - Client disconnected
+19:46:33,125 [TCP_Server.Server.TCP_Server_Program] INFO - Config successfully
+19:46:33,158 [TCP_Server.Server.TcpServer] INFO - Creating Server successfully
+19:46:33,182 [TCP_Server.Server.TcpServer] INFO - Starting Server successfully
+19:46:54,977 [TCP_Server.Server.TcpServer] INFO - Client connected
+19:46:56,680 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+19:46:57,071 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:46:57,071 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+19:47:07,093 [TCP_Server.Server.TcpServer] INFO - Client disconnected
+20:42:23,559 [TCP_Server.Server.TCP_Server_Program] INFO - Config successfully
+20:42:23,585 [TCP_Server.Server.TcpServer] INFO - Creating Server successfully
+20:42:23,628 [TCP_Server.Server.TcpServer] INFO - Starting Server successfully
+20:43:36,633 [TCP_Server.Server.TcpServer] INFO - Client connected
+20:43:37,963 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+20:43:38,335 [TCP_Server.Server.ServerClient] INFO - Save Raw data to database
+20:43:38,339 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+20:43:38,358 [TCP_Server.Server.ServerClient] INFO - Save data to database
+20:43:38,358 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+20:43:42,840 [TCP_Server.Server.TcpServer] INFO - Client disconnected
+20:44:19,426 [TCP_Server.Server.TcpServer] INFO - Client connected
+20:44:21,138 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+20:44:21,140 [TCP_Server.Server.ServerClient] INFO - Save Raw data to database
+20:44:21,140 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+20:44:21,167 [TCP_Server.Server.ServerClient] INFO - Save data to database
+20:44:21,167 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+20:44:25,500 [TCP_Server.Server.TcpServer] INFO - Client disconnected

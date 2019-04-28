@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ConfigObject xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/TCP_Server.Controllers.Config">
 	<IpAddress>127.0.0.1</IpAddress>
-	<Port>10088</Port>
+	<Port>10084</Port>
+	<SqlDbName>VehicleData</SqlDbName>
+	<SqlPwd>123456</SqlPwd>
+	<SqlServer>.\</SqlServer>
+	<SqlUser>sa</SqlUser>
 </ConfigObject>

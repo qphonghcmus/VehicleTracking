@@ -14,6 +14,7 @@ namespace TCP_Server.Server
         private static TcpServer _server;
         private static string IpAddress = null;
         private static int PortNumber = 0;
+        public static string _connectionString = "";
 
         // Log
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -34,6 +35,8 @@ namespace TCP_Server.Server
                 GlobalVar global = new GlobalVar();
                 IpAddress = global.configObject.IpAddress;
                 PortNumber = global.configObject.Port;
+                _connectionString = string.Format(@"Server={0};Database={1};User Id={2};Password={3};", global.configObject.SqlServer,
+                        global.configObject.SqlDbName, global.configObject.SqlUser, global.configObject.SqlPwd);
 
                 log.Info("Config successfully");
             }catch(Exception ex)

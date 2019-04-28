@@ -101,6 +101,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\DataProvider.cs" />
     <Compile Include="Server\GlobalVar.cs" />
     <Compile Include="Server\ServerClient.cs" />
     <Compile Include="Server\StreamWireProtocol.cs" />
