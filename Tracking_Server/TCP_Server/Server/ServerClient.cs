@@ -90,77 +90,90 @@ namespace TCP_Server.Server
         {
             #region Split Data
 
-            //string[] dataArray = data.Split('&');
-            //DateTime dateTime = DateTime.Now;
+            string[] dataArray = data.Split('&');
+            DateTime dateTime = DateTime.Now;
 
-            //// &I
-            //string[] stringI = dataArray[1].Trim().Substring(2).Split(';');
-            //string idcard = stringI[0].Trim();
-            //string serial = stringI[1].Trim();
+            // &I
+            string[] stringI = dataArray[1].Trim().Substring(2).Split(';');
+            string idcard = stringI[0].Trim();
+            string serial = stringI[1].Trim();
+            I_Data i_Data = new I_Data(serial, idcard, dateTime);
 
+            // &G
+            string[] stringG = dataArray[2].Trim().Substring(2).Split(';');
+            string status = stringG[0].Trim();
+            string vido = stringG[1].Trim();
+            string kinhdo = stringG[2].Trim();
+            string vantocgps = stringG[3].Trim();
+            string khoangcachgps = stringG[4].Trim();
+            string tongkhoangcach = stringG[5].Trim();
+            float.Parse(vido);
+            G_Data g_Data = new G_Data(serial, Convert.ToBoolean(status), vido, kinhdo, float.Parse(vantocgps), Convert.ToInt64(khoangcachgps), Convert.ToInt64(tongkhoangcach), dateTime);
 
-            //// &G
-            //string[] stringG = dataArray[2].Trim().Substring(2).Split(';');
-            //string status = stringG[0].Trim();
-            //string vido = stringG[1].Trim();
-            //string kinhdo = stringG[2].Trim();
-            //string vantocgps = stringG[3].Trim();
-            //string khoangcachgps = stringG[4].Trim();
-            //string tongkhoangcach = stringG[5].Trim();
-
-
-            //// &S1
-            //string[] stringS1 = dataArray[3].Trim().Substring(3).Split(';');
-            //string trangthai = stringS1[0].Trim();
-            //string dienapbinh = stringS1[1].Trim();
-            //string dienappin = stringS1[2].Trim();
-            //string cuongdoGSM = stringS1[3].Trim();
-            //string loithenho = stringS1[4].Trim();
-
-
-            //// &D
-            //string[] stringD = dataArray[4].Trim().Substring(2).Split(';');
-            //string cuocxe = stringD[0].Trim();
-            //string thoigian = stringD[1].Trim();
+            // &S1
+            string[] stringS1 = dataArray[3].Trim().Substring(3).Split(';');
+            string trangthai = stringS1[0].Trim();
+            string dienapbinh = stringS1[1].Trim();
+            string dienappin = stringS1[2].Trim();
+            string cuongdoGSM = stringS1[3].Trim();
+            string loithenho = stringS1[4].Trim();
+            S1_Data s1_Data = new S1_Data(serial, Convert.ToByte(trangthai), float.Parse(dienapbinh), float.Parse(dienappin), float.Parse(cuongdoGSM), loithenho, dateTime);
 
 
-            //// &H1
-            //if (data.IndexOf("&H1") != -1)
-            //{
-            //    string[] stringH1 = dataArray[5].Trim().Substring(3).Split(';');
-            //    string maUID = stringH1[0].Trim();
-            //    string giaypheplaixe = stringH1[1].Trim();
-            //    string vantocxe = stringH1[2].Trim();
+            // &D
+            string[] stringD = dataArray[4].Trim().Substring(2).Split(';');
+            string cuocxe = stringD[0].Trim();
+            string thoigian = stringD[1].Trim();
+            D_Data d_Data = new D_Data(serial, cuocxe, Convert.ToInt32(thoigian), dateTime);
 
-            //}
+            // &H1
+            H1_Data h1_Data = null;
+            if (data.IndexOf("&H1") != -1)
+            {
+                string[] stringH1 = dataArray[5].Trim().Substring(3).Split(';');
+                string maUID = stringH1[0].Trim();
+                string giaypheplaixe = stringH1[1].Trim();
+                string vantocxe = stringH1[2].Trim();
+                h1_Data = new H1_Data(serial, maUID, giaypheplaixe, float.Parse(vantocxe), dateTime);
+            }
 
-            //// &CT
-            //if (data.IndexOf("&CT") != -1)
-            //{
-            //    string[] stringCT = dataArray[6].Trim().Substring(3).Split(';');
-            //    string from = stringCT[0].Trim();
-            //    string sdt = stringCT[1].Trim();
-            //    string malenh = stringCT[2].Trim();
-            //    string okerror = stringCT[3].Trim();
-
-            //}
+            // &CT
+            CT_Data cT_Data = null;
+            if (data.IndexOf("&CT") != -1)
+            {
+                string[] stringCT = dataArray[6].Trim().Substring(3).Split(';');
+                string from = stringCT[0].Trim();
+                string sdt = stringCT[1].Trim();
+                string malenh = stringCT[2].Trim();
+                string okerror = stringCT[3].Trim();
+                cT_Data = new CT_Data(serial, from, sdt, Convert.ToInt32(malenh), dateTime);
+            }
 
             #endregion
 
             // Save Rawdata
-            SaveRawData(data, "001-debug");
+            SaveRawData(data, serial);
 
             // Checksum
 
             // Split data and Save
-            //SaveSplittedData(data);
+            SaveSplittedData(i_Data,g_Data,s1_Data,d_Data,h1_Data,cT_Data);
         }
 
         // Spli and Save data
-        private void SaveSplittedData(string data)
+        private void SaveSplittedData(I_Data I, G_Data G, S1_Data S1, D_Data D, H1_Data H1 = null, CT_Data CT = null)
         {
             try
             {
+                DbContext.Insert<I_Data>(I);
+                DbContext.Insert<G_Data>(G);
+                DbContext.Insert<S1_Data>(S1);
+                DbContext.Insert<D_Data>(D);
+                DbContext.Insert<H1_Data>(H1);
+                DbContext.Insert<CT_Data>(CT);
+
+                DbContext.Commit();
+
                 log.Info("Save data to database");
             }
             catch (Exception e)

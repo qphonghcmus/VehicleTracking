@@ -48,9 +48,6 @@ namespace DaoDatabase
         /// </summary>
         private void Refresh()
         {
-            // Debug
-            return;
-            // end Debug
             if (_session != null && !_session.IsOpen)
             {
                 _session.Connection.Open();

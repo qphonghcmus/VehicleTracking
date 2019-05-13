@@ -1,267 +1,494 @@
-21:16:40,115 [NHibernate.Cfg.Environment] INFO - NHibernate 5.1.1 (assembly 5.1.0.0)
-21:16:40,147 [NHibernate.Cfg.Environment] INFO - hibernate-configuration section not found in application configuration file
-21:16:40,151 [NHibernate.Cfg.Environment] INFO - Bytecode provider name : lcg
-21:16:40,155 [NHibernate.Cfg.Environment] INFO - Using reflection optimizer
-21:16:40,428 [NHibernate.Cfg.Configuration] DEBUG - Mapping XML:
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="TCP_Server.Models.RawData, TCP_Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`RawData`"><cache usage="read-write" /><id name="Serial" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Serial" /><generator class="assigned" /></id><property name="Data" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" lazy="false"><column name="Data" /></property><property name="Datetime" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" lazy="false"><column name="Datetime" /></property></class></hibernate-mapping>
-21:16:42,544 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:42,614 [NHibernate.Cfg.XmlHbmBinding.Binder] INFO - Mapping class: TCP_Server.Models.RawData -> RawData
-21:16:42,665 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Serial -> Serial, type: String
-21:16:42,706 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Data -> Data, type: String
-21:16:42,706 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Datetime -> Datetime, type: DateTime
-21:16:42,720 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:42,730 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - Running hbm2ddl schema update
-21:16:42,731 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - fetching database metadata
-21:16:42,733 [NHibernate.Connection.ConnectionProviderFactory] INFO - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
-21:16:42,734 [NHibernate.Connection.ConnectionProvider] INFO - Configuring ConnectionProvider
-21:16:42,737 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:42,738 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
-21:16:43,202 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - updating schema
-21:16:43,213 [NHibernate.Cfg.Configuration] INFO - checking mappings queue
-21:16:43,213 [NHibernate.Cfg.Configuration] INFO - processing one-to-many association mappings
-21:16:43,213 [NHibernate.Cfg.Configuration] INFO - processing one-to-one association property references
-21:16:43,213 [NHibernate.Cfg.Configuration] INFO - processing foreign key constraints
-21:16:43,215 [NHibernate.Cfg.Configuration] INFO - processing filters (second pass)
-21:16:43,658 [NHibernate.Tool.hbm2ddl.DatabaseMetadata] INFO - table not found: RawData
-21:16:43,678 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:43,680 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:43,681 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:43,702 [NHibernate.Tool.hbm2ddl.DatabaseMetadata] INFO - table not found: RawData
-21:16:43,724 [NHibernate.Tool.hbm2ddl.SchemaUpdate] DEBUG - create table [RawData] (Serial NVARCHAR(255) not null, Data NVARCHAR(255) null, Datetime DATETIME2 null, primary key (Serial))
-21:16:43,827 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - schema update complete
-21:16:43,829 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
-21:16:43,839 [NHibernate.Cfg.Configuration] INFO - checking mappings queue
-21:16:43,839 [NHibernate.Cfg.Configuration] INFO - processing one-to-many association mappings
-21:16:43,839 [NHibernate.Cfg.Configuration] INFO - processing one-to-one association property references
-21:16:43,839 [NHibernate.Cfg.Configuration] INFO - processing foreign key constraints
-21:16:43,839 [NHibernate.Cfg.Configuration] INFO - processing filters (second pass)
-21:16:43,858 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:43,865 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:44,011 [NHibernate.Exceptions.SQLExceptionConverterFactory] INFO - Using dialect defined converter
-21:16:44,011 [NHibernate.Cfg.SettingsFactory] INFO - Generate SQL with comments: disabled
-21:16:44,011 [NHibernate.Connection.ConnectionProviderFactory] INFO - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
-21:16:44,012 [NHibernate.Connection.ConnectionProvider] INFO - Configuring ConnectionProvider
-21:16:44,012 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:44,013 [NHibernate.Cfg.SettingsFactory] INFO - Transaction factory: NHibernate.Transaction.AdoNetWithSystemTransactionFactory
-21:16:44,014 [NHibernate.Cfg.SettingsFactory] INFO - Optimize cache for minimal puts: False
-21:16:44,014 [NHibernate.Cfg.SettingsFactory] INFO - Connection release mode: auto
-21:16:44,014 [NHibernate.Cfg.SettingsFactory] INFO - Default batch fetch size: 1
-21:16:44,014 [NHibernate.Cfg.SettingsFactory] INFO - Statistics: disabled
-21:16:44,014 [NHibernate.Cfg.SettingsFactory] INFO - Deleted entity synthetic identifier rollback: disabled
-21:16:44,016 [NHibernate.Cfg.SettingsFactory] INFO - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
-21:16:44,017 [NHibernate.Cfg.SettingsFactory] INFO - Query provider: NHibernate.Linq.DefaultQueryProvider
-21:16:44,019 [NHibernate.Cfg.SettingsFactory] INFO - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''}
-21:16:44,021 [NHibernate.Cfg.SettingsFactory] INFO - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-21:16:44,021 [NHibernate.Cfg.SettingsFactory] INFO - Order SQL inserts for batching: enabled
-21:16:44,021 [NHibernate.Cfg.SettingsFactory] INFO - Order SQL updates for batching: disabled
-21:16:44,021 [NHibernate.Cfg.SettingsFactory] DEBUG - Wrap result sets: disabled
-21:16:44,021 [NHibernate.Cfg.SettingsFactory] DEBUG - Batch versioned data: disabled
-21:16:44,023 [NHibernate.Cfg.SettingsFactory] INFO - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-21:16:44,023 [NHibernate.Cfg.SettingsFactory] INFO - Default flush mode: Auto
-21:16:44,023 [NHibernate.Cfg.SettingsFactory] INFO - Named query checking : enabled
-21:16:44,025 [NHibernate.Cfg.SettingsFactory] DEBUG - Track session id: enabled
-21:16:44,046 [NHibernate.Impl.SessionFactoryImpl] INFO - building session factory
-21:16:44,046 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Session factory constructed with filter configurations : {}
-21:16:44,047 [NHibernate.Impl.SessionFactoryImpl] DEBUG - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'adonet.batch_size'='100', 'connection.connection_string'='Server=.\;Database=VehicleData;User Id=sa;Password=123456;'}
-21:16:44,048 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
-21:16:44,176 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
-21:16:44,181 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:16:44,184 [NHibernate.Cache.CacheFactory] DEBUG - cache for: TCP_Server.Models.RawData usage strategy: read-write
-21:16:44,186 [NHibernate.Cache.NoCacheProvider] WARN - Second-level cache is enabled in a class, but no cache provider was selected. Fake cache used.
-21:16:44,260 [NHibernate.Tuple.Entity.AbstractEntityTuplizer] DEBUG - No custom accessors found for entity: TCP_Server.Models.RawData
-21:16:44,289 [NHibernate.Tuple.Entity.PocoEntityTuplizer] DEBUG - Create Instantiator using optimizer for:TCP_Server.Models.RawData
-21:16:44,388 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Static SQL for entity: TCP_Server.Models.RawData
-21:16:44,389 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Version select: SELECT Serial FROM [RawData] WHERE Serial = ?
-21:16:44,389 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Snapshot select: SELECT rawdata_.Serial, rawdata_.Data as data2_0_, rawdata_.Datetime as datetime3_0_ FROM [RawData] rawdata_ WHERE rawdata_.Serial=?
-21:16:44,389 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Insert 0: INSERT INTO [RawData] (Data, Datetime, Serial) VALUES (?, ?, ?)
-21:16:44,389 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Update 0: UPDATE [RawData] SET Data = ?, Datetime = ? WHERE Serial = ?
-21:16:44,389 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Delete 0: DELETE FROM [RawData] WHERE Serial = ?
-21:16:44,431 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Serial=?
-21:16:44,431 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Serial=?
-21:16:44,431 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ with (updlock, rowlock) WHERE rawdata0_.Serial=?
-21:16:44,432 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ with (updlock, rowlock, nowait) WHERE rawdata0_.Serial=?
-21:16:44,432 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ with (updlock, rowlock) WHERE rawdata0_.Serial=?
-21:16:44,434 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Serial=?
-21:16:44,434 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Serial=?
-21:16:44,436 [NHibernate.Impl.SessionFactoryObjectFactory] DEBUG - initializing class SessionFactoryObjectFactory
-21:16:44,437 [NHibernate.Impl.SessionFactoryObjectFactory] DEBUG - registered: 5ff568542f0d4197aa2b99f301731e4c(unnamed)
-21:16:44,437 [NHibernate.Impl.SessionFactoryObjectFactory] INFO - no name configured
-21:16:44,437 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Instantiated session factory
-21:16:44,442 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Checking 0 named HQL queries
-21:16:44,442 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Checking 0 named SQL queries
-21:16:44,442 [TCP_Server.Server.TCP_Server_Program] INFO - Config successfully
-21:16:44,446 [TCP_Server.Server.TcpServer] INFO - Creating Server successfully
-21:16:44,467 [TCP_Server.Server.TcpServer] INFO - Starting Server successfully
-21:16:46,988 [NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]]] DEBUG - Opening Hibernate Session.
-21:16:47,022 [NHibernate.Impl.SessionImpl] DEBUG - [session-id=37cc9339-6842-4d3f-95e5-b582a66d8c15] opened session at timestamp: 636932926069, for session factory: [/5ff568542f0d4197aa2b99f301731e4c]
-21:16:47,025 [TCP_Server.Server.TcpServer] INFO - Client connected
-21:16:48,469 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
-21:16:48,505 [TCP_Server.Server.ServerClient] ERROR - Replying message failed
-System.MissingMethodException: Method not found: 'System.Data.IDbConnection NHibernate.ISession.get_Connection()'.
-   at DaoDatabase.NhibernateUnit.Refresh()
-   at DaoDatabase.NhibernateUnit.Insert[T](T obj) in C:\Users\PC\Desktop\Vehicle Tracking\VehicleTracking\Tracking_Server\DaoDatabase\NhibernateUnit.cs:line 162
-   at TCP_Server.Server.ServerClient.SaveRawData(String data, String serial) in C:\Users\PC\Desktop\Vehicle Tracking\VehicleTracking\Tracking_Server\TCP_Server\Server\ServerClient.cs:line 178
-   at TCP_Server.Server.ServerClient.HandlePackage(String data) in C:\Users\PC\Desktop\Vehicle Tracking\VehicleTracking\Tracking_Server\TCP_Server\Server\ServerClient.cs:line 151
-   at TCP_Server.Server.ServerClient.Client_MessageReceived(Object sender, MessageEventArgs e) in C:\Users\PC\Desktop\Vehicle Tracking\VehicleTracking\Tracking_Server\TCP_Server\Server\ServerClient.cs:line 63
-21:16:50,483 [TCP_Server.Server.TcpServer] INFO - Client disconnected
-21:17:24,585 [NHibernate.Cfg.Environment] INFO - NHibernate 5.1.1 (assembly 5.1.0.0)
-21:17:24,611 [NHibernate.Cfg.Environment] INFO - hibernate-configuration section not found in application configuration file
-21:17:24,613 [NHibernate.Cfg.Environment] INFO - Bytecode provider name : lcg
-21:17:24,614 [NHibernate.Cfg.Environment] INFO - Using reflection optimizer
-21:17:24,858 [NHibernate.Cfg.Configuration] DEBUG - Mapping XML:
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="TCP_Server.Models.RawData, TCP_Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`RawData`"><cache usage="read-write" /><id name="Serial" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Serial" /><generator class="assigned" /></id><property name="Data" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" lazy="false"><column name="Data" /></property><property name="Datetime" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" lazy="false"><column name="Datetime" /></property></class></hibernate-mapping>
-21:17:26,576 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:17:26,677 [NHibernate.Cfg.XmlHbmBinding.Binder] INFO - Mapping class: TCP_Server.Models.RawData -> RawData
-21:17:26,728 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Serial -> Serial, type: String
-21:17:26,758 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Data -> Data, type: String
-21:17:26,758 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Datetime -> Datetime, type: DateTime
-21:17:26,772 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:17:26,778 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - Running hbm2ddl schema update
-21:17:26,779 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - fetching database metadata
-21:17:26,782 [NHibernate.Connection.ConnectionProviderFactory] INFO - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
-21:17:26,783 [NHibernate.Connection.ConnectionProvider] INFO - Configuring ConnectionProvider
-21:17:26,787 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:17:26,789 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
-21:17:27,188 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - updating schema
-21:17:27,196 [NHibernate.Cfg.Configuration] INFO - checking mappings queue
-21:17:27,197 [NHibernate.Cfg.Configuration] INFO - processing one-to-many association mappings
-21:17:27,197 [NHibernate.Cfg.Configuration] INFO - processing one-to-one association property references
-21:17:27,197 [NHibernate.Cfg.Configuration] INFO - processing foreign key constraints
-21:17:27,200 [NHibernate.Cfg.Configuration] INFO - processing filters (second pass)
-21:17:28,057 [NHibernate.Dialect.Schema.ITableMetadata] INFO - table found: VehicleData.dbo.RawData
-21:17:28,059 [NHibernate.Dialect.Schema.ITableMetadata] INFO - columns: Serial, Data, Datetime
-21:17:28,059 [NHibernate.Dialect.Schema.ITableMetadata] INFO - foreign keys: 
-21:17:28,059 [NHibernate.Dialect.Schema.ITableMetadata] INFO - indexes: PK__RawData__1A00E0927F8814FA
-21:17:28,081 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - schema update complete
-21:17:28,082 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
-21:17:28,093 [NHibernate.Cfg.Configuration] INFO - checking mappings queue
-21:17:28,093 [NHibernate.Cfg.Configuration] INFO - processing one-to-many association mappings
-21:17:28,093 [NHibernate.Cfg.Configuration] INFO - processing one-to-one association property references
-21:17:28,093 [NHibernate.Cfg.Configuration] INFO - processing foreign key constraints
-21:17:28,093 [NHibernate.Cfg.Configuration] INFO - processing filters (second pass)
-21:17:28,110 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:17:28,117 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:17:28,248 [NHibernate.Exceptions.SQLExceptionConverterFactory] INFO - Using dialect defined converter
-21:17:28,248 [NHibernate.Cfg.SettingsFactory] INFO - Generate SQL with comments: disabled
-21:17:28,248 [NHibernate.Connection.ConnectionProviderFactory] INFO - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
-21:17:28,249 [NHibernate.Connection.ConnectionProvider] INFO - Configuring ConnectionProvider
-21:17:28,249 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:17:28,251 [NHibernate.Cfg.SettingsFactory] INFO - Transaction factory: NHibernate.Transaction.AdoNetWithSystemTransactionFactory
-21:17:28,253 [NHibernate.Cfg.SettingsFactory] INFO - Optimize cache for minimal puts: False
-21:17:28,253 [NHibernate.Cfg.SettingsFactory] INFO - Connection release mode: auto
-21:17:28,253 [NHibernate.Cfg.SettingsFactory] INFO - Default batch fetch size: 1
-21:17:28,253 [NHibernate.Cfg.SettingsFactory] INFO - Statistics: disabled
-21:17:28,253 [NHibernate.Cfg.SettingsFactory] INFO - Deleted entity synthetic identifier rollback: disabled
-21:17:28,254 [NHibernate.Cfg.SettingsFactory] INFO - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
-21:17:28,254 [NHibernate.Cfg.SettingsFactory] INFO - Query provider: NHibernate.Linq.DefaultQueryProvider
-21:17:28,256 [NHibernate.Cfg.SettingsFactory] INFO - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''}
-21:17:28,258 [NHibernate.Cfg.SettingsFactory] INFO - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-21:17:28,259 [NHibernate.Cfg.SettingsFactory] INFO - Order SQL inserts for batching: enabled
-21:17:28,259 [NHibernate.Cfg.SettingsFactory] INFO - Order SQL updates for batching: disabled
-21:17:28,259 [NHibernate.Cfg.SettingsFactory] DEBUG - Wrap result sets: disabled
-21:17:28,259 [NHibernate.Cfg.SettingsFactory] DEBUG - Batch versioned data: disabled
-21:17:28,261 [NHibernate.Cfg.SettingsFactory] INFO - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-21:17:28,261 [NHibernate.Cfg.SettingsFactory] INFO - Default flush mode: Auto
-21:17:28,261 [NHibernate.Cfg.SettingsFactory] INFO - Named query checking : enabled
-21:17:28,262 [NHibernate.Cfg.SettingsFactory] DEBUG - Track session id: enabled
-21:17:28,280 [NHibernate.Impl.SessionFactoryImpl] INFO - building session factory
-21:17:28,280 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Session factory constructed with filter configurations : {}
-21:17:28,280 [NHibernate.Impl.SessionFactoryImpl] DEBUG - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'adonet.batch_size'='100', 'connection.connection_string'='Server=.\;Database=VehicleData;User Id=sa;Password=123456;'}
-21:17:28,281 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
-21:17:28,329 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
-21:17:28,335 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-21:17:28,339 [NHibernate.Cache.CacheFactory] DEBUG - cache for: TCP_Server.Models.RawData usage strategy: read-write
-21:17:28,341 [NHibernate.Cache.NoCacheProvider] WARN - Second-level cache is enabled in a class, but no cache provider was selected. Fake cache used.
-21:17:28,403 [NHibernate.Tuple.Entity.AbstractEntityTuplizer] DEBUG - No custom accessors found for entity: TCP_Server.Models.RawData
-21:17:28,431 [NHibernate.Tuple.Entity.PocoEntityTuplizer] DEBUG - Create Instantiator using optimizer for:TCP_Server.Models.RawData
-21:17:28,528 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Static SQL for entity: TCP_Server.Models.RawData
-21:17:28,528 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Version select: SELECT Serial FROM [RawData] WHERE Serial = ?
-21:17:28,528 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Snapshot select: SELECT rawdata_.Serial, rawdata_.Data as data2_0_, rawdata_.Datetime as datetime3_0_ FROM [RawData] rawdata_ WHERE rawdata_.Serial=?
-21:17:28,528 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Insert 0: INSERT INTO [RawData] (Data, Datetime, Serial) VALUES (?, ?, ?)
-21:17:28,528 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Update 0: UPDATE [RawData] SET Data = ?, Datetime = ? WHERE Serial = ?
-21:17:28,528 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Delete 0: DELETE FROM [RawData] WHERE Serial = ?
-21:17:28,573 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Serial=?
-21:17:28,574 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Serial=?
-21:17:28,574 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ with (updlock, rowlock) WHERE rawdata0_.Serial=?
-21:17:28,574 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ with (updlock, rowlock, nowait) WHERE rawdata0_.Serial=?
-21:17:28,574 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ with (updlock, rowlock) WHERE rawdata0_.Serial=?
-21:17:28,576 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Serial=?
-21:17:28,577 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity TCP_Server.Models.RawData: SELECT rawdata0_.Serial as serial1_0_0_, rawdata0_.Data as data2_0_0_, rawdata0_.Datetime as datetime3_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Serial=?
-21:17:28,579 [NHibernate.Impl.SessionFactoryObjectFactory] DEBUG - initializing class SessionFactoryObjectFactory
-21:17:28,581 [NHibernate.Impl.SessionFactoryObjectFactory] DEBUG - registered: 201614745a0f40f98b05e581cc73dcc7(unnamed)
-21:17:28,581 [NHibernate.Impl.SessionFactoryObjectFactory] INFO - no name configured
-21:17:28,581 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Instantiated session factory
-21:17:28,588 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Checking 0 named HQL queries
-21:17:28,588 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Checking 0 named SQL queries
-21:17:28,588 [TCP_Server.Server.TCP_Server_Program] INFO - Config successfully
-21:17:28,593 [TCP_Server.Server.TcpServer] INFO - Creating Server successfully
-21:17:28,620 [TCP_Server.Server.TcpServer] INFO - Starting Server successfully
-21:17:32,628 [NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]]] DEBUG - Opening Hibernate Session.
-21:17:32,657 [NHibernate.Impl.SessionImpl] DEBUG - [session-id=9b02d995-9d5a-4117-a36b-a2e7af3ee6b8] opened session at timestamp: 636932926526, for session factory: [/201614745a0f40f98b05e581cc73dcc7]
-21:17:32,660 [TCP_Server.Server.TcpServer] INFO - Client connected
-21:17:34,102 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
-21:17:34,107 [NHibernate.Event.Default.DefaultSaveOrUpdateEventListener] DEBUG - saving transient instance
-21:17:34,111 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - generated identifier: 001-debug, using strategy: NHibernate.Id.Assigned
-21:17:34,113 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - saving [TCP_Server.Models.RawData#001-debug]
-21:17:34,132 [NHibernate.Transaction.AdoTransaction] DEBUG - Begin (ReadCommitted)
-21:17:34,186 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
-21:17:34,199 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
-21:17:34,200 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
-21:17:34,203 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
-21:17:34,204 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
-21:17:34,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
-21:17:34,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
-21:17:34,217 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-21:17:34,217 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-21:17:34,218 [NHibernate.Impl.Printer] DEBUG - listing entities:
-21:17:34,220 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Serial'='001-debug', 'Data'='01010101010101010101
-', 'Datetime'='5/12/2019 9:17:34 PM'}
-21:17:34,220 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
-21:17:34,221 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
-21:17:34,226 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Inserting entity: [TCP_Server.Models.RawData#001-debug]
-21:17:34,237 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened new DbCommand, open DbCommands: 1
-21:17:34,237 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Building an DbCommand object for the SqlString: INSERT INTO [RawData] (Data, Datetime, Serial) VALUES (?, ?, ?)
-21:17:34,238 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Dehydrating entity: [TCP_Server.Models.RawData#001-debug]
-21:17:34,239 [NHibernate.Type.StringType] DEBUG - binding '01010101010101010101
-' to parameter: 0
-21:17:34,241 [NHibernate.Type.DateTimeType] DEBUG - binding '5/12/2019 9:17:34 PM' to parameter: 1
-21:17:34,242 [NHibernate.Type.StringType] DEBUG - binding '001-debug' to parameter: 2
-21:17:34,246 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Adding to batch:INSERT INTO [RawData] (Data, Datetime, Serial) VALUES (@p0, @p1, @p2);@p0 = '01010101010101010101
-' [Type: String (4000:0:0)], @p1 = 2019-05-12T21:17:34.1039113+07:00 [Type: DateTime2 (8:0:0)], @p2 = '001-debug' [Type: String (4000:0:0)]
-21:17:34,256 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Executing batch
-21:17:34,258 [NHibernate.Transaction.AdoTransaction] DEBUG - Enlist Command
-21:17:34,259 [NHibernate.SQL] DEBUG - Batch commands:
-command 0:INSERT INTO [RawData] (Data, Datetime, Serial) VALUES (@p0, @p1, @p2);@p0 = '01010101010101010101
-' [Type: String (4000:0:0)], @p1 = 2019-05-12T21:17:34.1039113+07:00 [Type: DateTime2 (8:0:0)], @p2 = '001-debug' [Type: String (4000:0:0)]
-
-21:17:34,592 [NHibernate.AdoNet.AbstractBatcher] DEBUG - ExecuteBatch for 1 statements took 336 ms
-21:17:34,597 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbCommand, open DbCommands: 0
-21:17:34,601 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
-21:17:34,605 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
-21:17:34,611 [NHibernate.Transaction.AdoTransaction] DEBUG - Start Commit
-21:17:34,613 [NHibernate.Impl.SessionImpl] DEBUG - before transaction completion
-21:17:34,613 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
-21:17:34,613 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
-21:17:34,613 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
-21:17:34,613 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
-21:17:34,614 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
-21:17:34,614 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
-21:17:34,614 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
-21:17:34,614 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-21:17:34,614 [NHibernate.Impl.Printer] DEBUG - listing entities:
-21:17:34,614 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Serial'='001-debug', 'Data'='01010101010101010101
-', 'Datetime'='5/12/2019 9:17:34 PM'}
-21:17:34,614 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
-21:17:34,614 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
-21:17:34,614 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
-21:17:34,614 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
-21:17:34,623 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction Committed
-21:17:34,625 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
-21:17:34,625 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
-21:17:34,626 [NHibernate.Impl.SessionImpl] DEBUG - transaction completion
-21:17:34,631 [NHibernate.Cache.ReadWriteCache] DEBUG - Inserting: TCP_Server.Models.RawData#001-debug
-21:17:34,632 [NHibernate.Cache.ReadWriteCache] DEBUG - Inserted: TCP_Server.Models.RawData#001-debug
-21:17:34,634 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction disposed.
-21:17:34,640 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
-21:17:34,640 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
-21:17:36,883 [TCP_Server.Server.TcpServer] INFO - Client disconnected
+14:50:07,029 [NHibernate.Cfg.Environment] INFO - NHibernate 5.1.1 (assembly 5.1.0.0)
+14:50:07,053 [NHibernate.Cfg.Environment] INFO - hibernate-configuration section not found in application configuration file
+14:50:07,055 [NHibernate.Cfg.Environment] INFO - Bytecode provider name : lcg
+14:50:07,057 [NHibernate.Cfg.Environment] INFO - Using reflection optimizer
+14:50:07,348 [NHibernate.Cfg.Configuration] DEBUG - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="TCP_Server.Models.RawData, TCP_Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`RawData`"><cache usage="read-write" /><id name="Id" type="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="native" /></id><property name="Serial" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" lazy="false"><column name="Serial" index="Serial" /></property><property name="Data" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" lazy="false"><column name="Data" /></property><property name="Datetime" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" lazy="false"><column name="Datetime" /></property></class></hibernate-mapping>
+14:50:09,975 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+14:50:10,045 [NHibernate.Cfg.XmlHbmBinding.Binder] INFO - Mapping class: TCP_Server.Models.RawData -> RawData
+14:50:10,088 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Id -> Id, type: Int64
+14:50:10,116 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Serial -> Serial, type: String
+14:50:10,116 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Data -> Data, type: String
+14:50:10,117 [NHibernate.Cfg.XmlHbmBinding.Binder] DEBUG - Mapped property: Datetime -> Datetime, type: DateTime
+14:50:10,130 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+14:50:10,137 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - Running hbm2ddl schema update
+14:50:10,138 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - fetching database metadata
+14:50:10,140 [NHibernate.Connection.ConnectionProviderFactory] INFO - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+14:50:10,141 [NHibernate.Connection.ConnectionProvider] INFO - Configuring ConnectionProvider
+14:50:10,144 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+14:50:10,145 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:10,673 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - updating schema
+14:50:10,689 [NHibernate.Cfg.Configuration] INFO - checking mappings queue
+14:50:10,690 [NHibernate.Cfg.Configuration] INFO - processing one-to-many association mappings
+14:50:10,690 [NHibernate.Cfg.Configuration] INFO - processing one-to-one association property references
+14:50:10,690 [NHibernate.Cfg.Configuration] INFO - processing foreign key constraints
+14:50:10,694 [NHibernate.Cfg.Configuration] INFO - processing filters (second pass)
+14:50:12,126 [NHibernate.Dialect.Schema.ITableMetadata] INFO - table found: VehicleData.dbo.RawData
+14:50:12,129 [NHibernate.Dialect.Schema.ITableMetadata] INFO - columns: Id, Serial, Data, Datetime
+14:50:12,129 [NHibernate.Dialect.Schema.ITableMetadata] INFO - foreign keys: 
+14:50:12,129 [NHibernate.Dialect.Schema.ITableMetadata] INFO - indexes: PK__RawData__3214EC075220C363, Serial
+14:50:12,161 [NHibernate.Tool.hbm2ddl.SchemaUpdate] INFO - schema update complete
+14:50:12,162 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:12,175 [NHibernate.Cfg.Configuration] INFO - checking mappings queue
+14:50:12,176 [NHibernate.Cfg.Configuration] INFO - processing one-to-many association mappings
+14:50:12,176 [NHibernate.Cfg.Configuration] INFO - processing one-to-one association property references
+14:50:12,176 [NHibernate.Cfg.Configuration] INFO - processing foreign key constraints
+14:50:12,176 [NHibernate.Cfg.Configuration] INFO - processing filters (second pass)
+14:50:12,203 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+14:50:12,213 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+14:50:12,402 [NHibernate.Exceptions.SQLExceptionConverterFactory] INFO - Using dialect defined converter
+14:50:12,402 [NHibernate.Cfg.SettingsFactory] INFO - Generate SQL with comments: disabled
+14:50:12,403 [NHibernate.Connection.ConnectionProviderFactory] INFO - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+14:50:12,403 [NHibernate.Connection.ConnectionProvider] INFO - Configuring ConnectionProvider
+14:50:12,403 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+14:50:12,405 [NHibernate.Cfg.SettingsFactory] INFO - Transaction factory: NHibernate.Transaction.AdoNetWithSystemTransactionFactory
+14:50:12,406 [NHibernate.Cfg.SettingsFactory] INFO - Optimize cache for minimal puts: False
+14:50:12,407 [NHibernate.Cfg.SettingsFactory] INFO - Connection release mode: auto
+14:50:12,407 [NHibernate.Cfg.SettingsFactory] INFO - Default batch fetch size: 1
+14:50:12,407 [NHibernate.Cfg.SettingsFactory] INFO - Statistics: disabled
+14:50:12,407 [NHibernate.Cfg.SettingsFactory] INFO - Deleted entity synthetic identifier rollback: disabled
+14:50:12,408 [NHibernate.Cfg.SettingsFactory] INFO - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+14:50:12,410 [NHibernate.Cfg.SettingsFactory] INFO - Query provider: NHibernate.Linq.DefaultQueryProvider
+14:50:12,413 [NHibernate.Cfg.SettingsFactory] INFO - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''}
+14:50:12,414 [NHibernate.Cfg.SettingsFactory] INFO - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+14:50:12,415 [NHibernate.Cfg.SettingsFactory] INFO - Order SQL inserts for batching: enabled
+14:50:12,415 [NHibernate.Cfg.SettingsFactory] INFO - Order SQL updates for batching: disabled
+14:50:12,416 [NHibernate.Cfg.SettingsFactory] DEBUG - Wrap result sets: disabled
+14:50:12,416 [NHibernate.Cfg.SettingsFactory] DEBUG - Batch versioned data: disabled
+14:50:12,418 [NHibernate.Cfg.SettingsFactory] INFO - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+14:50:12,418 [NHibernate.Cfg.SettingsFactory] INFO - Default flush mode: Auto
+14:50:12,419 [NHibernate.Cfg.SettingsFactory] INFO - Named query checking : enabled
+14:50:12,420 [NHibernate.Cfg.SettingsFactory] DEBUG - Track session id: enabled
+14:50:12,446 [NHibernate.Impl.SessionFactoryImpl] INFO - building session factory
+14:50:12,446 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Session factory constructed with filter configurations : {}
+14:50:12,447 [NHibernate.Impl.SessionFactoryImpl] DEBUG - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'adonet.batch_size'='100', 'connection.connection_string'='Server=.\;Database=VehicleData;User Id=sa;Password=123456;'}
+14:50:12,448 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:12,590 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:12,598 [NHibernate.Dialect.Dialect] INFO - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+14:50:12,602 [NHibernate.Cache.CacheFactory] DEBUG - cache for: TCP_Server.Models.RawData usage strategy: read-write
+14:50:12,603 [NHibernate.Cache.NoCacheProvider] WARN - Second-level cache is enabled in a class, but no cache provider was selected. Fake cache used.
+14:50:12,665 [NHibernate.Tuple.Entity.AbstractEntityTuplizer] DEBUG - No custom accessors found for entity: TCP_Server.Models.RawData
+14:50:12,687 [NHibernate.Tuple.Entity.PocoEntityTuplizer] DEBUG - Create Instantiator using optimizer for:TCP_Server.Models.RawData
+14:50:12,767 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Static SQL for entity: TCP_Server.Models.RawData
+14:50:12,767 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Version select: SELECT Id FROM [RawData] WHERE Id = ?
+14:50:12,767 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Snapshot select: SELECT rawdata_.Id, rawdata_.Serial as serial2_0_, rawdata_.Data as data3_0_, rawdata_.Datetime as datetime4_0_ FROM [RawData] rawdata_ WHERE rawdata_.Id=?
+14:50:12,767 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Insert 0: INSERT INTO [RawData] (Serial, Data, Datetime, Id) VALUES (?, ?, ?, ?)
+14:50:12,767 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Update 0: UPDATE [RawData] SET Serial = ?, Data = ?, Datetime = ? WHERE Id = ?
+14:50:12,767 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Delete 0: DELETE FROM [RawData] WHERE Id = ?
+14:50:12,767 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG -  Identity insert: INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (?, ?, ?); select SCOPE_IDENTITY()
+14:50:12,813 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Id as id1_0_0_, rawdata0_.Serial as serial2_0_0_, rawdata0_.Data as data3_0_0_, rawdata0_.Datetime as datetime4_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Id=?
+14:50:12,813 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Id as id1_0_0_, rawdata0_.Serial as serial2_0_0_, rawdata0_.Data as data3_0_0_, rawdata0_.Datetime as datetime4_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Id=?
+14:50:12,813 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Id as id1_0_0_, rawdata0_.Serial as serial2_0_0_, rawdata0_.Data as data3_0_0_, rawdata0_.Datetime as datetime4_0_0_ FROM [RawData] rawdata0_ with (updlock, rowlock) WHERE rawdata0_.Id=?
+14:50:12,813 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Id as id1_0_0_, rawdata0_.Serial as serial2_0_0_, rawdata0_.Data as data3_0_0_, rawdata0_.Datetime as datetime4_0_0_ FROM [RawData] rawdata0_ with (updlock, rowlock, nowait) WHERE rawdata0_.Id=?
+14:50:12,813 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for entity TCP_Server.Models.RawData: SELECT rawdata0_.Id as id1_0_0_, rawdata0_.Serial as serial2_0_0_, rawdata0_.Data as data3_0_0_, rawdata0_.Datetime as datetime4_0_0_ FROM [RawData] rawdata0_ with (updlock, rowlock) WHERE rawdata0_.Id=?
+14:50:12,817 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity TCP_Server.Models.RawData: SELECT rawdata0_.Id as id1_0_0_, rawdata0_.Serial as serial2_0_0_, rawdata0_.Data as data3_0_0_, rawdata0_.Datetime as datetime4_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Id=?
+14:50:12,817 [NHibernate.Loader.Entity.AbstractEntityLoader] DEBUG - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity TCP_Server.Models.RawData: SELECT rawdata0_.Id as id1_0_0_, rawdata0_.Serial as serial2_0_0_, rawdata0_.Data as data3_0_0_, rawdata0_.Datetime as datetime4_0_0_ FROM [RawData] rawdata0_ WHERE rawdata0_.Id=?
+14:50:12,818 [NHibernate.Impl.SessionFactoryObjectFactory] DEBUG - initializing class SessionFactoryObjectFactory
+14:50:12,819 [NHibernate.Impl.SessionFactoryObjectFactory] DEBUG - registered: c07c1311db3a454ea523d60fa5c3f9cf(unnamed)
+14:50:12,819 [NHibernate.Impl.SessionFactoryObjectFactory] INFO - no name configured
+14:50:12,820 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Instantiated session factory
+14:50:12,823 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Checking 0 named HQL queries
+14:50:12,823 [NHibernate.Impl.SessionFactoryImpl] DEBUG - Checking 0 named SQL queries
+14:50:12,824 [TCP_Server.Server.TCP_Server_Program] INFO - Config successfully
+14:50:12,829 [TCP_Server.Server.TcpServer] INFO - Creating Server successfully
+14:50:12,854 [TCP_Server.Server.TcpServer] INFO - Starting Server successfully
+14:50:20,839 [NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]]] DEBUG - Opening Hibernate Session.
+14:50:20,881 [NHibernate.Impl.SessionImpl] DEBUG - [session-id=88c773f2-7ee6-4649-ae07-67ed6626b7df] opened session at timestamp: 636933558208, for session factory: [/c07c1311db3a454ea523d60fa5c3f9cf]
+14:50:20,884 [TCP_Server.Server.TcpServer] INFO - Client connected
+14:50:21,845 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+14:50:21,851 [NHibernate.Event.Default.DefaultSaveOrUpdateEventListener] DEBUG - saving transient instance
+14:50:21,856 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - saving [TCP_Server.Models.RawData#<null>]
+14:50:21,862 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing insertions
+14:50:21,868 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing identity-insert immediately
+14:50:21,871 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Inserting entity: TCP_Server.Models.RawData (native id)
+14:50:21,884 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened new DbCommand, open DbCommands: 1
+14:50:21,884 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Building an DbCommand object for the SqlString: INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (?, ?, ?); select SCOPE_IDENTITY()
+14:50:21,886 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Dehydrating entity: [TCP_Server.Models.RawData#<null>]
+14:50:21,887 [NHibernate.Type.StringType] DEBUG - binding '001' to parameter: 0
+14:50:21,889 [NHibernate.Type.StringType] DEBUG - binding '0101010101010101010101010101
+' to parameter: 1
+14:50:21,891 [NHibernate.Type.DateTimeType] DEBUG - binding '5/13/2019 2:50:21 PM' to parameter: 2
+14:50:21,900 [NHibernate.SQL] DEBUG - INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (@p0, @p1, @p2); select SCOPE_IDENTITY();@p0 = '001' [Type: String (4000:0:0)], @p1 = '0101010101010101010101010101
+' [Type: String (4000:0:0)], @p2 = 2019-05-13T14:50:21.8463735+07:00 [Type: DateTime2 (8:0:0)]
+14:50:21,901 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:22,132 [NHibernate.AdoNet.AbstractBatcher] DEBUG - ExecuteReader took 228 ms
+14:50:22,133 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened DbDataReader, open DbDataReaders: 1
+14:50:22,158 [NHibernate.Type.Int64Type] DEBUG - returning '1' as column: 
+14:50:22,158 [NHibernate.Id.IdentifierGeneratorFactory] DEBUG - Natively generated identity: 1
+14:50:22,164 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbDataReader, open DbDataReaders :0
+14:50:22,165 [NHibernate.AdoNet.AbstractBatcher] DEBUG - DataReader was closed after 260 ms
+14:50:22,166 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbCommand, open DbCommands: 0
+14:50:22,168 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:22,168 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:22,179 [NHibernate.Transaction.AdoTransaction] DEBUG - Begin (ReadCommitted)
+14:50:22,180 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:22,190 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:22,191 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:22,193 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:22,195 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:22,206 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:22,206 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:22,206 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:22,206 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:22,208 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:22,209 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='1', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:21 PM'}
+14:50:22,209 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:22,210 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:22,211 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:22,212 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:22,214 [NHibernate.Transaction.AdoTransaction] DEBUG - Start Commit
+14:50:22,215 [NHibernate.Impl.SessionImpl] DEBUG - before transaction completion
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:22,216 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:22,216 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='1', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:21 PM'}
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:22,216 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:22,216 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:22,216 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:22,221 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction Committed
+14:50:22,222 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:22,222 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:22,223 [NHibernate.Impl.SessionImpl] DEBUG - transaction completion
+14:50:22,227 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction disposed.
+14:50:22,233 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:22,233 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:26,917 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+14:50:26,917 [NHibernate.Event.Default.DefaultSaveOrUpdateEventListener] DEBUG - saving transient instance
+14:50:26,917 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - saving [TCP_Server.Models.RawData#<null>]
+14:50:26,917 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing insertions
+14:50:26,917 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing identity-insert immediately
+14:50:26,917 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Inserting entity: TCP_Server.Models.RawData (native id)
+14:50:26,917 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened new DbCommand, open DbCommands: 1
+14:50:26,918 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Building an DbCommand object for the SqlString: INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (?, ?, ?); select SCOPE_IDENTITY()
+14:50:26,918 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Dehydrating entity: [TCP_Server.Models.RawData#<null>]
+14:50:26,918 [NHibernate.Type.StringType] DEBUG - binding '001' to parameter: 0
+14:50:26,918 [NHibernate.Type.StringType] DEBUG - binding '0101010101010101010101010101
+' to parameter: 1
+14:50:26,918 [NHibernate.Type.DateTimeType] DEBUG - binding '5/13/2019 2:50:26 PM' to parameter: 2
+14:50:26,918 [NHibernate.SQL] DEBUG - INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (@p0, @p1, @p2); select SCOPE_IDENTITY();@p0 = '001' [Type: String (4000:0:0)], @p1 = '0101010101010101010101010101
+' [Type: String (4000:0:0)], @p2 = 2019-05-13T14:50:26.9179232+07:00 [Type: DateTime2 (8:0:0)]
+14:50:26,918 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:26,920 [NHibernate.AdoNet.AbstractBatcher] DEBUG - ExecuteReader took 1 ms
+14:50:26,920 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened DbDataReader, open DbDataReaders: 1
+14:50:26,920 [NHibernate.Type.Int64Type] DEBUG - returning '2' as column: 
+14:50:26,920 [NHibernate.Id.IdentifierGeneratorFactory] DEBUG - Natively generated identity: 2
+14:50:26,920 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbDataReader, open DbDataReaders :0
+14:50:26,920 [NHibernate.AdoNet.AbstractBatcher] DEBUG - DataReader was closed after 1 ms
+14:50:26,920 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbCommand, open DbCommands: 0
+14:50:26,920 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:26,920 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:26,920 [NHibernate.Transaction.AdoTransaction] DEBUG - Begin (ReadCommitted)
+14:50:26,920 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:26,920 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:26,921 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:26,921 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='2', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:26 PM'}
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:26,921 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:26,921 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:26,921 [NHibernate.Transaction.AdoTransaction] DEBUG - Start Commit
+14:50:26,921 [NHibernate.Impl.SessionImpl] DEBUG - before transaction completion
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:26,921 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:26,921 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='2', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:26 PM'}
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:26,921 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:26,921 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:26,921 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:26,921 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction Committed
+14:50:26,921 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:26,921 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:26,921 [NHibernate.Impl.SessionImpl] DEBUG - transaction completion
+14:50:26,921 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction disposed.
+14:50:26,922 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:26,922 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:27,725 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+14:50:27,725 [NHibernate.Event.Default.DefaultSaveOrUpdateEventListener] DEBUG - saving transient instance
+14:50:27,725 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - saving [TCP_Server.Models.RawData#<null>]
+14:50:27,725 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing insertions
+14:50:27,725 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing identity-insert immediately
+14:50:27,725 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Inserting entity: TCP_Server.Models.RawData (native id)
+14:50:27,725 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened new DbCommand, open DbCommands: 1
+14:50:27,725 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Building an DbCommand object for the SqlString: INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (?, ?, ?); select SCOPE_IDENTITY()
+14:50:27,725 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Dehydrating entity: [TCP_Server.Models.RawData#<null>]
+14:50:27,725 [NHibernate.Type.StringType] DEBUG - binding '001' to parameter: 0
+14:50:27,725 [NHibernate.Type.StringType] DEBUG - binding '0101010101010101010101010101
+' to parameter: 1
+14:50:27,725 [NHibernate.Type.DateTimeType] DEBUG - binding '5/13/2019 2:50:27 PM' to parameter: 2
+14:50:27,725 [NHibernate.SQL] DEBUG - INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (@p0, @p1, @p2); select SCOPE_IDENTITY();@p0 = '001' [Type: String (4000:0:0)], @p1 = '0101010101010101010101010101
+' [Type: String (4000:0:0)], @p2 = 2019-05-13T14:50:27.7259267+07:00 [Type: DateTime2 (8:0:0)]
+14:50:27,725 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:27,727 [NHibernate.AdoNet.AbstractBatcher] DEBUG - ExecuteReader took 1 ms
+14:50:27,727 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened DbDataReader, open DbDataReaders: 1
+14:50:27,727 [NHibernate.Type.Int64Type] DEBUG - returning '3' as column: 
+14:50:27,727 [NHibernate.Id.IdentifierGeneratorFactory] DEBUG - Natively generated identity: 3
+14:50:27,727 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbDataReader, open DbDataReaders :0
+14:50:27,727 [NHibernate.AdoNet.AbstractBatcher] DEBUG - DataReader was closed after 1 ms
+14:50:27,727 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbCommand, open DbCommands: 0
+14:50:27,727 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:27,727 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:27,727 [NHibernate.Transaction.AdoTransaction] DEBUG - Begin (ReadCommitted)
+14:50:27,727 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:27,727 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:27,727 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='3', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:27 PM'}
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:27,727 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:27,727 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:27,727 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:27,727 [NHibernate.Transaction.AdoTransaction] DEBUG - Start Commit
+14:50:27,728 [NHibernate.Impl.SessionImpl] DEBUG - before transaction completion
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:27,728 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:27,728 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='3', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:27 PM'}
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:27,728 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:27,728 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:27,728 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:27,728 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction Committed
+14:50:27,728 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:27,728 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:27,728 [NHibernate.Impl.SessionImpl] DEBUG - transaction completion
+14:50:27,728 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction disposed.
+14:50:27,728 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:27,728 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:28,479 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+14:50:28,479 [NHibernate.Event.Default.DefaultSaveOrUpdateEventListener] DEBUG - saving transient instance
+14:50:28,479 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - saving [TCP_Server.Models.RawData#<null>]
+14:50:28,479 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing insertions
+14:50:28,479 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing identity-insert immediately
+14:50:28,479 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Inserting entity: TCP_Server.Models.RawData (native id)
+14:50:28,479 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened new DbCommand, open DbCommands: 1
+14:50:28,479 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Building an DbCommand object for the SqlString: INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (?, ?, ?); select SCOPE_IDENTITY()
+14:50:28,479 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Dehydrating entity: [TCP_Server.Models.RawData#<null>]
+14:50:28,479 [NHibernate.Type.StringType] DEBUG - binding '001' to parameter: 0
+14:50:28,479 [NHibernate.Type.StringType] DEBUG - binding '0101010101010101010101010101
+' to parameter: 1
+14:50:28,479 [NHibernate.Type.DateTimeType] DEBUG - binding '5/13/2019 2:50:28 PM' to parameter: 2
+14:50:28,479 [NHibernate.SQL] DEBUG - INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (@p0, @p1, @p2); select SCOPE_IDENTITY();@p0 = '001' [Type: String (4000:0:0)], @p1 = '0101010101010101010101010101
+' [Type: String (4000:0:0)], @p2 = 2019-05-13T14:50:28.4794388+07:00 [Type: DateTime2 (8:0:0)]
+14:50:28,479 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:28,480 [NHibernate.AdoNet.AbstractBatcher] DEBUG - ExecuteReader took 0 ms
+14:50:28,480 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened DbDataReader, open DbDataReaders: 1
+14:50:28,480 [NHibernate.Type.Int64Type] DEBUG - returning '4' as column: 
+14:50:28,480 [NHibernate.Id.IdentifierGeneratorFactory] DEBUG - Natively generated identity: 4
+14:50:28,480 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbDataReader, open DbDataReaders :0
+14:50:28,480 [NHibernate.AdoNet.AbstractBatcher] DEBUG - DataReader was closed after 1 ms
+14:50:28,480 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbCommand, open DbCommands: 0
+14:50:28,480 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:28,480 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:28,480 [NHibernate.Transaction.AdoTransaction] DEBUG - Begin (ReadCommitted)
+14:50:28,480 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:28,481 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:28,481 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='4', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:28 PM'}
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:28,481 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:28,481 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:28,481 [NHibernate.Transaction.AdoTransaction] DEBUG - Start Commit
+14:50:28,481 [NHibernate.Impl.SessionImpl] DEBUG - before transaction completion
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:28,481 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:28,481 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:28,482 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='4', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:28 PM'}
+14:50:28,482 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:28,482 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:28,482 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:28,482 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:28,482 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction Committed
+14:50:28,482 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:28,482 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:28,482 [NHibernate.Impl.SessionImpl] DEBUG - transaction completion
+14:50:28,482 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction disposed.
+14:50:28,482 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:28,482 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:29,085 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+14:50:29,085 [NHibernate.Event.Default.DefaultSaveOrUpdateEventListener] DEBUG - saving transient instance
+14:50:29,085 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - saving [TCP_Server.Models.RawData#<null>]
+14:50:29,085 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing insertions
+14:50:29,086 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing identity-insert immediately
+14:50:29,086 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Inserting entity: TCP_Server.Models.RawData (native id)
+14:50:29,086 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened new DbCommand, open DbCommands: 1
+14:50:29,086 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Building an DbCommand object for the SqlString: INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (?, ?, ?); select SCOPE_IDENTITY()
+14:50:29,086 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Dehydrating entity: [TCP_Server.Models.RawData#<null>]
+14:50:29,086 [NHibernate.Type.StringType] DEBUG - binding '001' to parameter: 0
+14:50:29,086 [NHibernate.Type.StringType] DEBUG - binding '0101010101010101010101010101
+' to parameter: 1
+14:50:29,086 [NHibernate.Type.DateTimeType] DEBUG - binding '5/13/2019 2:50:29 PM' to parameter: 2
+14:50:29,086 [NHibernate.SQL] DEBUG - INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (@p0, @p1, @p2); select SCOPE_IDENTITY();@p0 = '001' [Type: String (4000:0:0)], @p1 = '0101010101010101010101010101
+' [Type: String (4000:0:0)], @p2 = 2019-05-13T14:50:29.0854298+07:00 [Type: DateTime2 (8:0:0)]
+14:50:29,086 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:29,087 [NHibernate.AdoNet.AbstractBatcher] DEBUG - ExecuteReader took 1 ms
+14:50:29,087 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened DbDataReader, open DbDataReaders: 1
+14:50:29,087 [NHibernate.Type.Int64Type] DEBUG - returning '5' as column: 
+14:50:29,087 [NHibernate.Id.IdentifierGeneratorFactory] DEBUG - Natively generated identity: 5
+14:50:29,087 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbDataReader, open DbDataReaders :0
+14:50:29,087 [NHibernate.AdoNet.AbstractBatcher] DEBUG - DataReader was closed after 1 ms
+14:50:29,087 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbCommand, open DbCommands: 0
+14:50:29,087 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:29,087 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:29,087 [NHibernate.Transaction.AdoTransaction] DEBUG - Begin (ReadCommitted)
+14:50:29,087 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:29,089 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:29,089 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='5', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:29 PM'}
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:29,089 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:29,089 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:29,089 [NHibernate.Transaction.AdoTransaction] DEBUG - Start Commit
+14:50:29,089 [NHibernate.Impl.SessionImpl] DEBUG - before transaction completion
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:29,089 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:29,089 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='5', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:29 PM'}
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:29,089 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:29,089 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:29,089 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:29,090 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction Committed
+14:50:29,090 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:29,090 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:29,090 [NHibernate.Impl.SessionImpl] DEBUG - transaction completion
+14:50:29,090 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction disposed.
+14:50:29,090 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:29,090 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:29,590 [TCP_Server.Server.ServerClient] INFO - Receiving message from client
+14:50:29,590 [NHibernate.Event.Default.DefaultSaveOrUpdateEventListener] DEBUG - saving transient instance
+14:50:29,590 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - saving [TCP_Server.Models.RawData#<null>]
+14:50:29,590 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing insertions
+14:50:29,590 [NHibernate.Event.Default.AbstractSaveEventListener] DEBUG - executing identity-insert immediately
+14:50:29,590 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Inserting entity: TCP_Server.Models.RawData (native id)
+14:50:29,590 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened new DbCommand, open DbCommands: 1
+14:50:29,590 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Building an DbCommand object for the SqlString: INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (?, ?, ?); select SCOPE_IDENTITY()
+14:50:29,590 [NHibernate.Persister.Entity.AbstractEntityPersister] DEBUG - Dehydrating entity: [TCP_Server.Models.RawData#<null>]
+14:50:29,590 [NHibernate.Type.StringType] DEBUG - binding '001' to parameter: 0
+14:50:29,590 [NHibernate.Type.StringType] DEBUG - binding '0101010101010101010101010101
+' to parameter: 1
+14:50:29,590 [NHibernate.Type.DateTimeType] DEBUG - binding '5/13/2019 2:50:29 PM' to parameter: 2
+14:50:29,590 [NHibernate.SQL] DEBUG - INSERT INTO [RawData] (Serial, Data, Datetime) VALUES (@p0, @p1, @p2); select SCOPE_IDENTITY();@p0 = '001' [Type: String (4000:0:0)], @p1 = '0101010101010101010101010101
+' [Type: String (4000:0:0)], @p2 = 2019-05-13T14:50:29.5909971+07:00 [Type: DateTime2 (8:0:0)]
+14:50:29,590 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:29,592 [NHibernate.AdoNet.AbstractBatcher] DEBUG - ExecuteReader took 0 ms
+14:50:29,592 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Opened DbDataReader, open DbDataReaders: 1
+14:50:29,592 [NHibernate.Type.Int64Type] DEBUG - returning '6' as column: 
+14:50:29,592 [NHibernate.Id.IdentifierGeneratorFactory] DEBUG - Natively generated identity: 6
+14:50:29,592 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbDataReader, open DbDataReaders :0
+14:50:29,592 [NHibernate.AdoNet.AbstractBatcher] DEBUG - DataReader was closed after 0 ms
+14:50:29,592 [NHibernate.AdoNet.AbstractBatcher] DEBUG - Closed DbCommand, open DbCommands: 0
+14:50:29,592 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:29,592 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:29,592 [NHibernate.Transaction.AdoTransaction] DEBUG - Begin (ReadCommitted)
+14:50:29,592 [NHibernate.Connection.DriverConnectionProvider] DEBUG - Obtaining DbConnection from Driver
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:29,592 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:29,592 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='6', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:29 PM'}
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:29,592 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:29,592 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:29,592 [NHibernate.Transaction.AdoTransaction] DEBUG - Start Commit
+14:50:29,592 [NHibernate.Impl.SessionImpl] DEBUG - before transaction completion
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - flushing session
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - processing flush-time cascades
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - dirty checking collections
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushing entities and processing referenced collections
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Processing unreferenced collections
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Scheduling collection removes/(re)creates/updates
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+14:50:29,592 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+14:50:29,592 [NHibernate.Impl.Printer] DEBUG - listing entities:
+14:50:29,593 [NHibernate.Impl.Printer] DEBUG - TCP_Server.Models.RawData{'Id'='6', 'Serial'='001', 'Data'='0101010101010101010101010101
+', 'Datetime'='5/13/2019 2:50:29 PM'}
+14:50:29,593 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - executing flush
+14:50:29,593 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush begin
+14:50:29,593 [NHibernate.AdoNet.ConnectionManager] DEBUG - Registering flush end
+14:50:29,593 [NHibernate.Event.Default.AbstractFlushingEventListener] DEBUG - post flush
+14:50:29,593 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction Committed
+14:50:29,593 [NHibernate.AdoNet.ConnectionManager] DEBUG - Aggressively releasing database connection
+14:50:29,593 [NHibernate.Connection.ConnectionProvider] DEBUG - Closing connection
+14:50:29,593 [NHibernate.Impl.SessionImpl] DEBUG - transaction completion
+14:50:29,593 [NHibernate.Transaction.AdoTransaction] DEBUG - DbTransaction disposed.
+14:50:29,593 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:29,593 [TCP_Server.Server.ServerClient] INFO - Replying message to client successfully
+14:50:38,281 [TCP_Server.Server.TcpServer] INFO - Client disconnected

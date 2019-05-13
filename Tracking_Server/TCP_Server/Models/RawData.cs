@@ -11,9 +11,15 @@ namespace TCP_Server.Models
     public class RawData : IEntity
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [PrimaryKey(KeyGenerateType = KeyGenerateType.Auto)] // Khoa chinh
+        public virtual long Id { get; set; }
+
+        /// <summary>
         /// ID 
         /// </summary>
-        [PrimaryKey(KeyGenerateType = KeyGenerateType.Manual)] // Khoa chinh
+        [BasicColumn(IsIndex = true)]
         public virtual string Serial { get; set; }
 
         /// <summary>
@@ -27,12 +33,6 @@ namespace TCP_Server.Models
 
         public RawData()
         {
-        }
-
-        public RawData(string data, DateTime datetime)
-        {
-            Data = data;
-            Datetime = datetime;
         }
 
         public RawData(string serial, string data, DateTime datetime)
