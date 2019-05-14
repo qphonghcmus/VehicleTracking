@@ -9,12 +9,12 @@ using TCP_Server.Controllers.Config;
 
 namespace TCP_Server.Server
 {
-    [PartCreationPolicy(CreationPolicy.Shared)]
+    //[PartCreationPolicy(CreationPolicy.Shared)]
     public class GlobalVar 
     {
         private IConfigManager configManager;
 
-        public ConfigObject configObject { get; set; }
+        public static ConfigObject configObject { get; set; }
 
         private const string path = "Config.xml";
 
@@ -25,7 +25,7 @@ namespace TCP_Server.Server
             LoadConfigFromFile();
         }
 
-        public void LoadConfigFromFile()
+        private void LoadConfigFromFile()
         {
             try
             {

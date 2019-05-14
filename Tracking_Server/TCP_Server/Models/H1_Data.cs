@@ -28,6 +28,10 @@ namespace TCP_Server.Models
         [BasicColumn]
         public virtual DateTime Datetime { get; set; }
 
+        public H1_Data()
+        {
+        }
+
         public H1_Data(string serial, string maUID, string giayPhepLaiXe, float vanTocXe, DateTime datetime)
         {
             Serial = serial;

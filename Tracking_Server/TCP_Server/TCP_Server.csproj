@@ -117,7 +117,8 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Config\ConfigObject.cs" />
-    <Compile Include="Core\RawDataManager.cs" />
+    <Compile Include="Core\Crc16Citt.cs" />
+    <Compile Include="Core\DataManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

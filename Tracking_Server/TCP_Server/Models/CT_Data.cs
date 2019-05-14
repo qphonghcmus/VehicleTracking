@@ -17,7 +17,7 @@ namespace TCP_Server.Models
         public virtual string Serial { get; set; }
 
         [BasicColumn]
-        public virtual string From { get; set; }
+        public virtual string _From { get; set; }
 
         [BasicColumn]
         public virtual string SDT { get; set; }
@@ -28,10 +28,14 @@ namespace TCP_Server.Models
         [BasicColumn]
         public virtual DateTime Datetime { get; set; }
 
+        public CT_Data()
+        {
+        }
+
         public CT_Data(string serial, string from, string sDT, int maLenh, DateTime datetime)
         {
             Serial = serial;
-            From = from;
+            _From = from;
             SDT = sDT;
             MaLenh = maLenh;
             Datetime = datetime;

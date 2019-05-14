@@ -38,6 +38,10 @@ namespace TCP_Server.Models
         [BasicColumn]
         public virtual DateTime Datetime { get; set; }
 
+        public G_Data()
+        {
+        }
+
         public G_Data(string serial, bool status, string viDo, string kinhDo, float vanToc, long khoangCach, long tongKhoangCach, DateTime datetime)
         {
             Serial = serial;

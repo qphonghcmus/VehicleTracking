@@ -22,6 +22,10 @@ namespace TCP_Server.Models
         [BasicColumn]
         public virtual DateTime Datetime { get; set; }
 
+        public I_Data()
+        {
+        }
+
         public I_Data(string serial, string iDCard, DateTime datetime)
         {
             Serial = serial;
