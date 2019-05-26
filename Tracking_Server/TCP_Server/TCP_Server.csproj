@@ -116,25 +116,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\Config\ConfigObject.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Models\Api\BaseResponse.cs" />
+    <Compile Include="Models\Api\DungDoRes.cs" />
+    <Compile Include="Models\Api\HanhTrinhRes.cs" />
+    <Compile Include="Models\Config\ConfigObject.cs" />
     <Compile Include="Core\Crc16Citt.cs" />
     <Compile Include="Core\DataManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CT_Data.cs" />
-    <Compile Include="Models\D_Data.cs" />
-    <Compile Include="Models\G_Data.cs" />
-    <Compile Include="Models\H1_Data.cs" />
-    <Compile Include="Models\I_Data.cs" />
-    <Compile Include="Models\RawData.cs" />
-    <Compile Include="Models\S1_Data.cs" />
+    <Compile Include="Models\Database\CT_Data.cs" />
+    <Compile Include="Models\Database\D_Data.cs" />
+    <Compile Include="Models\Database\G_Data.cs" />
+    <Compile Include="Models\Database\H1_Data.cs" />
+    <Compile Include="Models\Database\I_Data.cs" />
+    <Compile Include="Models\Database\RawData.cs" />
+    <Compile Include="Models\Database\S1_Data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\GlobalVar.cs" />
     <Compile Include="Server\ServerClient.cs" />
     <Compile Include="Server\StreamWireProtocol.cs" />
     <Compile Include="Server\TcpServer.cs" />
     <Compile Include="Server\TCP_Server_Program.cs" />
+    <Compile Include="Service\BaoCaoService.cs" />
+    <Compile Include="Service\IBaoCaoService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

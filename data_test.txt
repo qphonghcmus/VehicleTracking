@@ -1,1 +1,0 @@
-﻿&I=001; 001001;&G=0; 27.0003; 27.0003; 54.5; 100;836; &S1=1; 10;20; 36; loi the nho &D= abc; 92;&H1= xyz; abcxyz; 54.5;&CT=SERVER;;MACHINE=0;OK/ERR;33651

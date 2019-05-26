@@ -15,10 +15,18 @@ namespace TCP_Server
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
+                name: "ActionApi",
+                routeTemplate: "api/{controller}/{action}/{request}/{beginTime}/{endTime}",
+                defaults: new { request = RouteParameter.Optional , beginTime =RouteParameter.Optional, endTime = RouteParameter.Optional}
+            );
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+
         }
     }
 }
